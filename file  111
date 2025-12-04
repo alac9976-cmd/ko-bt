@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dán văn bản để xem</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        textarea { width: 100%; height: 150px; }
+        #output { margin-top: 20px; padding: 10px; border: 1px solid #ccc; min-height: 100px; }
+    </style>
+</head>
+<body>
+    <h2>Dán văn bản vào đây</h2>
+    <textarea id="input" placeholder="Dán văn bản..."></textarea>
+
+    <h3>Nội dung hiển thị:</h3>
+    <div id="output"></div>
+
+    <script>
+        const input = document.getElementById("input");
+        const output = document.getElementById("output");
+
+        input.addEventListener("input", () => {
+            output.textContent = input.value;
+        });
+    </script>
+</body>
+</html>
